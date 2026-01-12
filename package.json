@@ -1,0 +1,28 @@
+{
+  "name": "express-bootstrap",
+  "version": "1.0.0",
+  "description": "A CLI tool to bootstrap Express.js projects with TypeScript, CORS, body parser, routes, and middleware",
+  "main": "index.js",
+  "bin": {
+    "express-bootstrap": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "bootstrap",
+    "cli",
+    "typescript",
+    "scaffold",
+    "generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.15"
+  }
+}
+
