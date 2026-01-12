@@ -1,9 +1,29 @@
 #!/usr/bin/env node
 
-const fs = require('fs-extra');
+// Try to require dependencies, with helpful error messages
+let fs, chalk;
+try {
+  fs = require('fs-extra');
+  chalk = require('chalk');
+} catch (error) {
+  console.error('❌ Missing dependencies! Please install them:');
+  console.error('');
+  console.error('If you installed from git, run:');
+  if (process.platform === 'win32') {
+    console.error('   cd (npm root -g)\\express-bootstrap');
+    console.error('   npm install');
+  } else {
+    console.error('   cd $(npm root -g)/express-bootstrap');
+    console.error('   npm install');
+  }
+  console.error('');
+  console.error('Or reinstall from npm (recommended):');
+  console.error('   npm install -g express-bootstrap');
+  process.exit(1);
+}
+
 const path = require('path');
 const { execSync } = require('child_process');
-const chalk = require('chalk');
 
 const PROJECT_NAME = process.argv[2];
 

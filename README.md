@@ -10,12 +10,31 @@ A CLI tool to bootstrap Express.js projects with TypeScript, CORS, body parser, 
 npx express-bootstrap my-project
 ```
 
-### Global Installation
+### Global Installation from npm
 
 ```bash
 npm install -g express-bootstrap
 express-bootstrap my-project
 ```
+
+### Installation from Git Repository
+
+If installing from a git repository, you may need to install dependencies manually:
+
+```bash
+# Install the package
+npm install -g https://github.com/your-username/express-bootstrap.git
+
+# Install dependencies (if not automatically installed)
+cd $(npm root -g)/express-bootstrap
+npm install
+
+# Or on Windows PowerShell:
+cd (npm root -g)\express-bootstrap
+npm install
+```
+
+**Note:** When installing from git, npm may not automatically install dependencies. If you get a "Cannot find module" error, manually install dependencies as shown above.
 
 ## ✨ Features
 
